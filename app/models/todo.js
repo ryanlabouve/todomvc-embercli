@@ -14,7 +14,7 @@ Todo.reopenClass({
          },
          {
            id: 2,
-           title: '...',
+           title: 'asdf',
            isCompleted: false
          },
          {
