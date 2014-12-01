@@ -11,10 +11,8 @@
 
   <section id="main">
     <ul id="todo-list">
-      {{#each todo in model}}
       {{#each todo in model itemController="todo"}}
       <li {{bind-attr class="todo.isCompleted:completed"}}>
-        <input type="checkbox" class="toggle">
         {{input type="checkbox" checked=todo.isCompleted class="toggle"}}
         <label>{{todo.title}}</label></button class="destroy"></button>
       </li>
@@ -26,7 +24,7 @@
 
   <footer id="footer">
     <span id="todo-count">
-      <strong>2</strong> todos left
+      <strong>{{remaining}}</strong> {{inflection}} left
     </span>
     <ul id="filters">
       <li>
