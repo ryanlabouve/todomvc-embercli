@@ -23,6 +23,9 @@ export default Ember.ArrayController.extend({
       completed.invoke('save');
     }
   },
+  allAreDone: function(key, value) {
+    return !!this.get('length') && this.isEvery('isCompleted');
+  }.property('@each.isCompleted'),
   hasCompleted: function() {
     return this.get('completed') > 0;
   }.property('completed'),
