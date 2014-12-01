@@ -46,4 +46,4 @@ export default Ember.ArrayController.extend({
     var remaining = this.get('remaining');
     return remaining === 1 ? 'item' : 'items';
   }.property('remaining')
-})
+});
